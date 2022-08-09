@@ -1,0 +1,39 @@
+.circular-progress,
+.circular-progress:before,
+.circular-progress:after{
+	width: 12rem;
+	height: 12rem;
+	border-radius: 50%;
+}
+.circular-progress:before,
+.circular-progress:after{
+		position: absolute;
+		top: 0;
+		left: 0;
+		text-align: center;
+}
+.circular-progress{
+	margin: 5rem auto;
+	background: linear-gradient(0deg,#149900 43%, #071a00fa 43%);;
+	position: relative;
+	transform: rotate(30deg);
+}
+.circular-progress:before{
+		content: "USD";
+		color: #fff;
+		background: #141414 content-box;
+		padding: .5em;
+		box-sizing: border-box;
+		font-size: 2rem;
+		line-height: 8rem;
+		transform: rotate(-30deg);
+		font-family: 'Bebas Neue', cursive;
+}
+.circular-progress:after{
+	content: "26.89/60";
+		background: linear-gradient(transparent 100%,#141414 100%);
+ 		transform: scale(1.1) rotate(-30deg);
+ 		line-height: 13rem;
+ 		color: #aaa;
+}		
+

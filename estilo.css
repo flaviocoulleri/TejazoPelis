@@ -1,0 +1,372 @@
+:root{
+	--rojo: #E50914;
+	--fondo: #141414;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	background: var(--fondo);
+	font-family: 'Open Sans', sans-serif;
+}
+
+.contenedor{
+	width: 90%;
+	margin: auto;
+}
+header{
+	padding: 30px 0;
+}
+header .contenedor{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header .logo{
+	font-family: 'Bebas Neue', cursive;
+	font-weight: normal;
+	color: var(--rojo);
+	font-size: 40px;
+}
+
+header nav a{
+	color: #AAA;
+	text-decoration: none;
+	
+}
+header nav a:first-child,header nav a:nth-child(2),header nav a:nth-child(3){
+	margin-right: 10px;
+}
+header nav a:hover, header nav a.activo{
+	color: #fff;
+}
+
+/* Pelicula principal*/
+.pelicula-principal{
+	font-size: 16px;
+	min-height: 40.62em;
+	color: #fff;
+	background:linear-gradient(rgba(0, 0, 0, .50)0%,  rgba(0,0,0,.50) 100%), url(https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/dq18nCTTLpy9PmtzZI6Y2yAgdw5.jpg);
+	background-position: center;
+	background-size: cover;
+	margin-bottom: 3.12em;
+	display: flex;
+	align-items: flex-end;
+}
+.pelicula-principal .contenedor {
+	margin: 0 auto;
+	margin-bottom: 6.25em;
+}
+
+.pelicula-principal .titulo{
+	font-weight: 600;
+	font-size: 3.12em;
+	margin-bottom: 0.4em;
+}
+
+.pelicula-principal .descripcion{
+	font-weight: normal;
+	font-size: 1em;
+	line-height: 1.75em;
+	max-width: 50%;
+	margin-bottom: 1.25em;
+}
+.pelicula-principal .boton{
+	background: rgba(0, 0, 0, .5);
+	border: none;
+	border-radius: .31em;
+	padding: .93em 1.87em;
+	color: #fff;
+	margin-right: 1.25em;
+	cursor: pointer;
+	transition: .3s ease all;
+	font-size: 1.12em;
+}
+.pelicula-principal .boton:hover{
+	background: rgba(255, 255, 255, .5 );
+	color: #fff;
+
+}
+.pelicula-principal .boton i{
+	margin-right: 1.25em;
+}
+/*Reproductor*/
+.reproductor{
+	display: flex;
+	justify-content:center;
+	margin-bottom: 20px;
+}
+.reproductor iframe{
+	border: 2px solid var(--rojo);
+}
+/* Contenedor titulos y controles*/
+.contenedor-titulo-controles{
+	display: flex;
+	justify-content: space-between;
+	align-items: end;
+}
+.contenedor-titulo-controles h3{
+	color: #fff;
+	font-size: 30px;
+}
+.contenedor-titulo-controles .indicadores button,
+.contenedor-titulo-controles .indicadores1 button,
+.contenedor-titulo-controles .indicadores2 button,
+.contenedor-titulo-controles .indicadores3 button,
+.contenedor-titulo-controles .indicadores4 button{
+	background: #fff;
+	height: 3px;
+	width: 10px;
+	cursor: pointer;
+	border: none;
+	margin-right: 2px;
+}
+.contenedor-titulo-controles .indicadores button:hover,
+.contenedor-titulo-controles .indicadores button.activo,
+.contenedor-titulo-controles .indicadores1 button:hover,
+.contenedor-titulo-controles .indicadores1 button.activo,
+.contenedor-titulo-controles .indicadores2 button:hover,
+.contenedor-titulo-controles .indicadores2 button.activo,
+.contenedor-titulo-controles .indicadores3 button:hover,
+.contenedor-titulo-controles .indicadores3 button.activo,
+.contenedor-titulo-controles .indicadores4 button:hover,
+.contenedor-titulo-controles .indicadores4 button.activo{
+	background: red;
+}
+/*Contenedor principal y flechas*/
+.peliculas-recomendadas{
+	margin-bottom: 70px;
+}
+.peliculas-recomendadas .contenedor-principal,
+.peliculas-recomendadas .contenedor-principal1,
+.peliculas-recomendadas .contenedor-principal2,
+.peliculas-recomendadas .contenedor-principal3,
+.peliculas-recomendadas .contenedor-principal4{
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda,
+.peliculas-recomendadas .contenedor-principal1 .flecha-izquierda1,
+.peliculas-recomendadas .contenedor-principal .flecha-derecha,
+.peliculas-recomendadas .contenedor-principal1 .flecha-derecha1,
+
+.peliculas-recomendadas .contenedor-principal2 .flecha-izquierda2,
+.peliculas-recomendadas .contenedor-principal3 .flecha-izquierda3,
+.peliculas-recomendadas .contenedor-principal2 .flecha-derecha2,
+.peliculas-recomendadas .contenedor-principal3 .flecha-derecha3,
+.peliculas-recomendadas .contenedor-principal4 .flecha-izquierda4,
+.peliculas-recomendadas .contenedor-principal4 .flecha-derecha4{
+	position: absolute;
+	border: none;
+	background: rgba(0, 0, 0, .3);
+	font-size: 40px;
+	height: 50%;
+	top: calc(50% - 25%);
+	line-height: 40px;
+	width: 50px;
+	color: #fff;
+	cursor: pointer;
+	z-index: 500;
+	transition: .2s ease all;
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda,
+.peliculas-recomendadas .contenedor-principal1 .flecha-izquierda1,
+.peliculas-recomendadas .contenedor-principal2 .flecha-izquierda2,
+.peliculas-recomendadas .contenedor-principal3 .flecha-izquierda3,
+.peliculas-recomendadas .contenedor-principal4 .flecha-izquierda4{
+	left: 0;
+}
+.peliculas-recomendadas .contenedor-principal .flecha-derecha,
+.peliculas-recomendadas .contenedor-principal1 .flecha-derecha1,
+.peliculas-recomendadas .contenedor-principal2 .flecha-derecha2,
+.peliculas-recomendadas .contenedor-principal3 .flecha-derecha3,
+.peliculas-recomendadas .contenedor-principal4 .flecha-derecha4{
+	right : 0;
+}
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda:hover,
+.peliculas-recomendadas .contenedor-principal1 .flecha-izquierda1:hover,
+.peliculas-recomendadas .contenedor-principal .flecha-derecha:hover,
+.peliculas-recomendadas .contenedor-principal1 .flecha-derecha1:hover,
+.peliculas-recomendadas .contenedor-principal2 .flecha-izquierda2:hover,
+.peliculas-recomendadas .contenedor-principal3 .flecha-izquierda3:hover,
+.peliculas-recomendadas .contenedor-principal2 .flecha-derecha2:hover,
+.peliculas-recomendadas .contenedor-principal3 .flecha-derecha3:hover,
+.peliculas-recomendadas .contenedor-principal4 .flecha-izquierda4:hover,
+.peliculas-recomendadas .contenedor-principal4 .flecha-derecha4:hover{
+	background: rgba(0, 0, 0, .9);
+
+}
+
+/**carousel***/
+.peliculas-recomendadas .contenedor-carousel,
+.peliculas-recomendadas .contenedor-carousel1,
+.peliculas-recomendadas .contenedor-carousel2,
+.peliculas-recomendadas .contenedor-carousel3,
+.peliculas-recomendadas .contenedor-carousel4{
+	width: 100%;
+	padding: 20px 0;
+	overflow: hidden;
+	scroll-behavior: smooth;
+}
+.peliculas-recomendadas .contenedor-carousel .carousel,
+.peliculas-recomendadas .contenedor-carousel1 .carousel1,
+.peliculas-recomendadas .contenedor-carousel2 .carousel2,
+.peliculas-recomendadas .contenedor-carousel3 .carousel3,
+.peliculas-recomendadas .contenedor-carousel4 .carousel4{
+	display: flex;
+	flex-wrap: nowrap;
+}
+.peliculas-recomendadas .contenedor-carousel .carousel .pelicula,
+.peliculas-recomendadas .contenedor-carousel1 .carousel1 .pelicula1,
+.peliculas-recomendadas .contenedor-carousel2 .carousel2 .pelicula2,
+.peliculas-recomendadas .contenedor-carousel3 .carousel3 .pelicula3,
+.peliculas-recomendadas .contenedor-carousel4 .carousel4 .pelicula4{
+	min-width: 20%;
+	transition: .3s ease all;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
+}
+.peliculas-recomendadas .contenedor-carousel .carousel .pelicula.hover,
+.peliculas-recomendadas .contenedor-carousel1 .carousel1 .pelicula1.hover,
+.peliculas-recomendadas .contenedor-carousel2 .carousel2 .pelicula2.hover,
+.peliculas-recomendadas .contenedor-carousel3 .carousel3 .pelicula3.hover,
+.peliculas-recomendadas .contenedor-carousel4 .carousel4 .pelicula4.hover{
+	transform: scale(1.2);
+	transform-origin: center;
+}
+.peliculas-recomendadas .contenedor-carousel .carousel .pelicula img,
+.peliculas-recomendadas .contenedor-carousel1 .carousel1 .pelicula1 img,
+.peliculas-recomendadas .contenedor-carousel2 .carousel2 .pelicula2 img,
+.peliculas-recomendadas .contenedor-carousel3 .carousel3 .pelicula3 img,
+.peliculas-recomendadas .contenedor-carousel4 .carousel4 .pelicula4 img{
+	width: 100%;
+	vertical-align: top;
+}
+
+
+/*donaciones*/
+.text{
+	font-size: 1.5em;
+	font-family: 'Open Sans', sans-serif;
+	color: #fff;
+	text-align: center;	
+}
+.donaciones{
+	display: flex;
+	margin-top: 1em;
+	justify-content: center;
+}
+
+.anuncio{
+	width: 90%;
+	display: flex;
+	margin: 0 auto;
+	justify-content: center;
+	margin-bottom: 1rem;
+}
+.anuncio1{
+	display: none;
+}
+.anuncio2{
+	display: none;
+}
+
+/*media*/
+@media screen and (max-width: 800px){
+	header .logo{
+		margin-bottom: 10px;
+		font-size: 30px;
+	}
+	header .contenedor{
+		flex-direction: column;
+		text-align: center;
+	}
+	.pelicula-principal{
+		font-size: 14px;
+	}
+	.pelicula-principal .descripcion{
+		max-width: 100%;
+	}
+
+	.peliculas-recomendadas .contenedor-carousel,
+	.peliculas-recomendadas .contenedor-carousel1,
+	.peliculas-recomendadas .contenedor-carousel2,
+	.peliculas-recomendadas .contenedor-carousel3,
+	.peliculas-recomendadas .contenedor-carousel4{
+		overflow: visible;
+	}
+	.peliculas-recomendadas .contenedor-carousel .carousel,
+	.peliculas-recomendadas .contenedor-carousel1 .carousel1,
+	.peliculas-recomendadas .contenedor-carousel2 .carousel2,
+	.peliculas-recomendadas .contenedor-carousel3 .carousel3,
+	.peliculas-recomendadas .contenedor-carousel4 .carousel4{
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 20px;
+	}
+	.peliculas-recomendadas .indicadores,
+	.peliculas-recomendadas .flecha-izquierda,
+	.peliculas-recomendadas .flecha-derecha,
+	.peliculas-recomendadas .indicadores1,
+	.peliculas-recomendadas .flecha-izquierda1,
+	.peliculas-recomendadas .flecha-derecha1,
+	.peliculas-recomendadas .indicadores2,
+	.peliculas-recomendadas .flecha-izquierda2,
+	.peliculas-recomendadas .flecha-derecha2,
+	.peliculas-recomendadas .indicadores3,
+	.peliculas-recomendadas .flecha-izquierda3,
+	.peliculas-recomendadas .flecha-derecha3,
+	.peliculas-recomendadas .indicadores4,
+	.peliculas-recomendadas .flecha-izquierda4,
+	.peliculas-recomendadas .flecha-derecha4{
+		display: none ; 
+	}
+
+	.reproductor iframe,.reproductor video{
+		width: 90%;
+		height: 90%;
+
+	}
+	.pelicula-principal .boton:first-child{
+		margin-bottom: 5px;
+	}
+	.descripcion{
+		display: none;
+	}
+	.pelicula-principal .titulo{
+		font-size: 2.5em;
+	}
+	.anuncio{
+		display: none;
+	}
+	.anuncio1{
+	width: 90%;
+	display: flex;
+	margin: 0 auto;
+	justify-content: center;
+	margin-bottom: 1rem;
+	}
+}
+
+@media screen and (max-width: 320px){
+	.anuncio{
+		display: none;
+	}
+	.anuncio1{
+	display: none;
+	}
+	.anuncio2{
+	width: 90%;
+	display: flex;
+	margin: 0 auto;
+	justify-content: center;
+	margin-bottom: 1rem;
+	}
+}
